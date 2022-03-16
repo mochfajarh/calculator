@@ -149,7 +149,7 @@ html {
         <span>1</span>
         <span>2</span>
         <span>3</span>
-        <span class="operator">÷</span>
+        <span class="operator">Ã·</span>
         <span>0</span>
         <span>.</span>
         <span class="eval">=</span>
@@ -160,7 +160,7 @@ html {
 <!-- PrefixFree -->
 <script type="text/javascript">
 var keys = document.querySelectorAll('#calculator span');
-var operators = ['+', '-', 'x', '÷'];
+var operators = ['+', '-', 'x', 'Ã·'];
 var decimalAdded = false;
 
 for(var i = 0; i < keys.length; i++) {
@@ -177,7 +177,7 @@ for(var i = 0; i < keys.length; i++) {
         else if(btnVal == '=') {
             var equation = inputVal;
             var lastChar = equation[equation.length - 1];
-            equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+            equation = equation.replace(/x/g, '*').replace(/Ã·/g, '/');
             if(operators.indexOf(lastChar) > -1 || lastChar == '.')
                 equation = equation.replace(/.$/, '');
           
